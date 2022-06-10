@@ -13,141 +13,109 @@
 </head>
 <body>
 <div class="container">
-<div class="row">
-    <div class="col-lg-3">
-        <div class="card card-margin">
-            <div class="card-header no-border">
-                <h5 class="card-title">MONDAY</h5>
-            </div>
-            <div class="card-body pt-0">
-                <div class="widget-49">
-                    <div class="widget-49-title-wrapper">
-                        <div class="widget-49-date-primary">
-                            <span class="widget-49-date-day">MO</span>
+    <div style="margin:60px;text-align:center;">
+        <h1 style="color:#242F9B;font-weight:bold;">COLLEGE SCHEDULE</h3>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card card-margin">
+                <div class="card-header no-border">
+                    <h5 class="card-title" style="color:white;">MONDAY</h5>
+                </div>
+                <div class="card-body pt-0">
+                    <div class="widget-49">
+                        <div class="widget-49-meeting-action">
+                            <a href="TimetableSenin.php" class="btn btn-sm btn-flash-border-primary"  style="color:white;">View All</a>
                         </div>
                     </div>
-                    <div class="widget-49-meeting-action">
-                        <a href="Timetable.php" class="btn btn-sm btn-flash-border-primary">View All</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card card-margin">
+                <div class="card-header no-border">
+                    <h5 class="card-title" style="color:white;">TUESDAY</h5>
+                </div>
+                <div class="card-body pt-0">
+                    <div class="widget-49">
+                        <div class="widget-49-meeting-action">
+                            <a href="TimetableSelasa.php" class="btn btn-sm btn-flash-border-warning"  style="color:white;">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card card-margin">
+                <div class="card-header no-border">
+                    <h5 class="card-title" style="color:white;">WEDNESDAY</h5>
+                </div>
+                <div class="card-body pt-0">
+                    <div class="widget-49">
+                        <div class="widget-49-meeting-action">
+                            <a href="TimetableRabu.php" class="btn btn-sm btn-flash-border-success"  style="color:white;">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card card-margin">
+                <div class="card-header no-border">
+                    <h5 class="card-title" style="color:white;">THURSDAY</h5>
+                </div>
+                <div class="card-body pt-0">
+                    <div class="widget-49">
+                        <div class="widget-49-meeting-action">
+                            <a href="TimetableKamis.php" class="btn btn-sm btn-flash-border-warning"  style="color:white;">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card card-margin">
+                <div class="card-header no-border">
+                    <h5 class="card-title" style="color:white;">FRIDAY</h5>
+                </div>
+                <div class="card-body pt-0">
+                    <div class="widget-49">
+                        <div class="widget-49-meeting-action">
+                            <a href="TimetableJumat.php" class="btn btn-sm btn-flash-border-warning"  style="color:white;">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card card-margin">
+                <div class="card-header no-border">
+                    <h5 class="card-title" style="color:white;">SATURDAY</h5>
+                </div>
+                <div class="card-body pt-0">
+                    <div class="widget-49">
+                        <div class="widget-49-meeting-action">
+                            <a href="TimetableSabtu.php" class="btn btn-sm btn-flash-border-warning"  style="color:white;">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card card-margin">
+                <div class="card-header no-border">
+                    <h5 class="card-title" style="color:white;">SUNDAY</h5>
+                </div>
+                <div class="card-body pt-0">
+                    <div class="widget-49">
+                        <div class="widget-49-meeting-action">
+                            <a href="TimetableMinggu.php" class="btn btn-sm btn-flash-border-warning" style="color:white;">View All</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-lg-3">
-        <div class="card card-margin">
-            <div class="card-header no-border">
-                <h5 class="card-title">TUESDAY</h5>
-            </div>
-            <div class="card-body pt-0">
-                <div class="widget-49">
-                    <div class="widget-49-title-wrapper">
-                        <div class="widget-49-date-warning">
-                            <span class="widget-49-date-day">TU</span>
-                        </div>
-                    </div>
-                    <div class="widget-49-meeting-action">
-                        <a href="Timetable.php" class="btn btn-sm btn-flash-border-warning">View All</a>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3">
-        <div class="card card-margin">
-            <div class="card-header no-border">
-                <h5 class="card-title">WEDNESDAY</h5>
-            </div>
-            <div class="card-body pt-0">
-                <div class="widget-49">
-                    <div class="widget-49-title-wrapper">
-                        <div class="widget-49-date-success">
-                            <span class="widget-49-date-day">WE</span>
-                        </div>
-                    </div>
-                    <div class="widget-49-meeting-action">
-                        <a href="Timetable.php" class="btn btn-sm btn-flash-border-success">View All</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3">
-        <div class="card card-margin">
-            <div class="card-header no-border">
-                <h5 class="card-title">THURSDAY</h5>
-            </div>
-            <div class="card-body pt-0">
-                <div class="widget-49">
-                    <div class="widget-49-title-wrapper">
-                        <div class="widget-49-date-primary">
-                            <span class="widget-49-date-day">TH</span>
-                        </div>
-                    </div>
-                    <div class="widget-49-meeting-action">
-                        <a href="Timetable.php" class="btn btn-sm btn-flash-border-warning">View All</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3">
-        <div class="card card-margin">
-            <div class="card-header no-border">
-                <h5 class="card-title">FRIDAY</h5>
-            </div>
-            <div class="card-body pt-0">
-                <div class="widget-49">
-                    <div class="widget-49-title-wrapper">
-                        <div class="widget-49-date-warning">
-                            <span class="widget-49-date-day">FR</span>
-                        </div>
-                    </div>
-                    <div class="widget-49-meeting-action">
-                        <a href="Timetable.php" class="btn btn-sm btn-flash-border-warning">View All</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3">
-        <div class="card card-margin">
-            <div class="card-header no-border">
-                <h5 class="card-title">SATURDAY</h5>
-            </div>
-            <div class="card-body pt-0">
-                <div class="widget-49">
-                    <div class="widget-49-title-wrapper">
-                        <div class="widget-49-date-success">
-                            <span class="widget-49-date-day">SA</span>
-                        </div>
-                    </div>
-                    <div class="widget-49-meeting-action">
-                        <a href="Timetable.php" class="btn btn-sm btn-flash-border-warning">View All</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3">
-        <div class="card card-margin">
-            <div class="card-header no-border">
-                <h5 class="card-title">SUNDAY</h5>
-            </div>
-            <div class="card-body pt-0">
-                <div class="widget-49">
-                    <div class="widget-49-title-wrapper">
-                        <div class="widget-49-date-primary">
-                            <span class="widget-49-date-day">SU</span>
-                        </div>
-                    </div>
-                    <div class="widget-49-meeting-action">
-                        <a href="Timetable.php" class="btn btn-sm btn-flash-border-warning">View All</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </div>
 
 <script type="text/javascript">

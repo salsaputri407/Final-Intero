@@ -18,9 +18,10 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        min-width: 0;
+        width: 250px;
+        height: 150px;
         word-wrap: break-word;
-        background-color: #ffffff;
+        background-image: linear-gradient(to bottom right, #9055FF, #13E2DA);
         background-clip: border-box;
         border: 1px solid #e6e4e9;
         border-radius: 8px;
@@ -35,7 +36,7 @@
         font-weight: 500;
         display: flex;
         align-items: center;
-        min-height: 50px;
+        min-height: 100px;
     }
     .card-header:first-child {
         border-radius: calc(8px - 1px) calc(8px - 1px) 0 0;

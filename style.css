@@ -1,9 +1,14 @@
 body{
     margin-top:20px;
+    background: #F4F7FD;
 }
-.bg-light-gray {
-    background-color: #f7f7f7;
+.bg-blue {
+    background-image: linear-gradient(to bottom right, #9055FF, #13E2DA);
 }
+.bg-white {
+    background-color: #fff;
+}
+
 .table-bordered thead td, .table-bordered thead th {
     border-bottom-width: 2px;
 }

@@ -1,3 +1,23 @@
+<?php
+
+require 'vendor/autoload.php';
+
+use GuzzleHttp\Client;
+
+$client = new Client();
+
+$response = $client->request(
+    'GET',
+    'http://192.168.24.1/final_intero/API_Minggu.php'
+);
+
+$body_json = $response->getBody();
+$result = json_decode($body_json); 
+
+$data = $result->data;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,83 +33,46 @@
 </head>
 <body>
 <div class="container">
-                <div class="timetable-img text-center">
-                    <img src="img/content/timetable.png" alt="">
-                </div>
-                <div class="table-responsive">
-                    <table class="table table-bordered text-center">
-                        <thead>
-                            <tr class="bg-light-gray">
-                                <th class="text-uppercase">No</th>
-                                <th class="text-uppercase">Time</th>
-                                <th class="text-uppercase">Name</th>
-                                <th class="text-uppercase">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="align-middle">1</td>
-                                <td class="align-middle">09:00am</td>
-                                <td>
-                                    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Dance</span>
-                                    <div class="margin-10px-top font-size14"></div>
-                                    <div class="font-size13 text-light-gray">Ivana Wong</div>
-                                </td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>&nbsp;Delete</button>
-                            <button class="btn btn-succes btn-sm"><i class="fas fa-magic"></i>&nbsp;Edit</button></td>
-                            </tr>
-
-                            <tr>
-                                <td class="align-middle">2</td>
-                                <td class="align-middle">10:00am</td>
-                                <td>
-                                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Music</span>
-                                    <div class="margin-10px-top font-size14"></div>
-                                    <div class="font-size13 text-light-gray">Ivana Wong</div>
-                                </td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>&nbsp;Delete</button>
-                                <button class="btn btn-succes btn-sm"><i class="fas fa-magic"></i>&nbsp;Edit</button></td>
-                            </tr>
-
-                            <tr>
-                                <td class="align-middle">3</td>
-                                <td class="align-middle">11:00am</td>
-                                <td>
-                                    <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
-                                    <div class="margin-10px-top font-size14"></div>
-                                </td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>&nbsp;Delete</button>
-                                <button class="btn btn-succes btn-sm"><i class="fas fa-magic"></i>&nbsp;Edit</button></td>
-                            </tr>
-
-                            <tr>
-                                <td class="align-middle">4</td>
-                                <td class="align-middle">12:00pm</td>
-                                <td class="bg-light-gray">
-
-                                </td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>&nbsp;Delete</button>
-                                <button class="btn btn-succes btn-sm"><i class="fas fa-magic"></i>&nbsp;Edit</button></td>
-                            </tr>
-
-                            <tr>
-                                <td class="align-middle">5</td>
-                                <td class="align-middle">01:00pm</td>
-                                <td>
-                                    <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">English</span>
-                                    <div class="margin-10px-top font-size14"></div>
-                                    <div class="font-size13 text-light-gray">James Smith</div>
-                                </td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>&nbsp;Delete</button>
-                                <button class="btn btn-succes btn-sm"><i class="fas fa-magic"></i>&nbsp;Edit</button></td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                    <a href="AddForm.php" class="btn btn-success btn-sm"><i class="fas fa-plus"></i>&nbsp;Add Task</a>
-                </div>
-            </div>
-
+    <div style="margin:60px;text-align:center;">
+        <h1 style="color:#242F9B;font-weight:bold;">SUNDAY</h3>
+    </div>
+    <div class="table-responsive">
+        <div style="margin-bottom:15px;text-align:right;">
+            <a href="AddForm.php" class="btn btn-success btn-sm">Add Task</a>
+        </div>
+    </div>
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr class="bg-blue">
+                    <th class="text-uppercase" style="color:white;">No</th>
+                    <th class="text-uppercase" style="color:white;">Time</th>
+                    <th class="text-uppercase" style="color:white;">Schedule</th>
+                    <th class="text-uppercase" style="color:white;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                $i = 1;
+                foreach ($data as $value) {
+                    echo "
+                    <tr class='bg-white'>
+                        <td class='align-middle'> $i </td>
+                        <td class='align-middle'>" . $value->wktMulai . "  -  " . $value->wktSelesai . "</td>
+                        <td class='align-middle'>" . $value->jadwal . "</td>
+                        <td>
+                        <button class='btn btn-primary btn-sm'>Edit</button>
+                        <button class='btn btn-danger btn-sm'>Delete</button>
+                        </td>
+                    </tr>
+                    ";
+                    $i++;
+                }
+            ?>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
 <script type="text/javascript">
 
 </script>
