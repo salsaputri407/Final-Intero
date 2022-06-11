@@ -80,7 +80,7 @@
     <div class="main-block">
       <form action="/">
         <div style="margin:15px;text-align:center;">
-          <h1 style="color:#242F9B; font-weight:bold;">ADD COLLEGE SCHEDULE</h3>
+          <h1 style="color:#242F9B; font-weight:bold;">EDIT COLLEGE SCHEDULE</h3>
         </div>
         <div class="testbox">
           <div class="item">
