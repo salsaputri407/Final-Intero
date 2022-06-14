@@ -1,3 +1,25 @@
+<?php
+
+require 'vendor/autoload.php';
+
+use GuzzleHttp\Client;
+
+$client = new Client();
+
+$id = $_GET['id'];
+
+$response = $client->request(
+    'GET',
+    'http://192.168.24.1/final_intero/API_Selasa.php?id=' . $id
+);
+
+$body_json = $response->getBody();
+$result = json_decode($body_json); 
+
+$data = $result->data;
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -78,25 +100,45 @@
   </head>
   <body>
     <div class="main-block">
-      <form action="/">
-        <div style="margin:15px;text-align:center;">
-          <h1 style="color:#242F9B; font-weight:bold;">EDIT COLLEGE SCHEDULE</h3>
-        </div>
-        <div class="testbox">
-          <div class="item">
-            <p>Schedule</p>
-              <div class="name-item">
-                <input class="fname" type="text" name="name" placeholder="Activity">
+
+    <?php
+       foreach ($data as $value) {
+        $mulai = str_replace(" ","",$value->wktMulai);
+        $selesai = str_replace(" ","",$value->wktSelesai);
+        echo "
+          <form method='POST' action='update_selasa.php?method=patch'>
+            <div style='margin:15px;text-align:center;'>
+              <h1 style='color:#242F9B; font-weight:bold;'>EDIT COLLEGE SCHEDULE</h3>
+            </div>
+            <div class='testbox'>
+              <div class='item'>
+                <p>Schedule</p>
+                  <div class='name-item'>
+                    <input class='fname' type='hidden' id='id' name='id' value='$value->id'>
+                  </div>
+                  <div class='name-item'>
+                    <input class='fname' type='text' id='jadwal' name='jadwal' value='$value->jadwal'>
+                  </div>
               </div>
-            <p>Time</p>
-              <div class="name-item">
-                <input type="time" name="time" placeholder="From">
-                <input type="time" name="time" placeholder="To">
+              <p>Time</p>
+                <div class='columns'>
+                  <div class='col-md-6'>
+                    <div class='form-group'>
+                      <input type='time' class='form-group' id='wktMulai' name='wktMulai' value='$mulai'>
+                    </div>
+                  </div>
+                  <div class='col-md-6'>
+                    <div class='form-group'>
+                      <input type='time' class='form-group' id='wktSelesai' name='wktSelesai' value='$selesai'>
+                    </div>
+                  </div>
               </div>
-          </div>
-        </div><center>
-        <button type="submit" href="TimetableSelasa.php">Submit</button></center>
-      </form>
+            </div><center>
+            <button type='submit' href='TimetableSelasa.php'>Submit</button></center>
+          </form>
+          ";
+       }
+      ?>
     </div>
   </body>
 </html>

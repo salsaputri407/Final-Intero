@@ -78,20 +78,23 @@
   </head>
   <body>
     <div class="main-block">
-      <form action="/">
+      <form  method="POST" action="create_senin.php">
         <div style="margin:15px;text-align:center;">
           <h1 style="color:#242F9B; font-weight:bold;">ADD COLLEGE SCHEDULE</h3>
         </div>
         <div class="testbox">
           <div class="item">
             <p>Schedule</p>
+              <div class='name-item'>
+                    <input class='fname' type='hidden' id='id' name='id' value='$value->id'>
+               </div>
               <div class="name-item">
-                <input class="fname" type="text" name="name" placeholder="Activity">
+                <input class="fname" id="jadwal" type="text" name="jadwal" placeholder="Activity">
               </div>
             <p>Time</p>
               <div class="name-item">
-                <input type="time" name="time" placeholder="From">
-                <input type="time" name="time" placeholder="To">
+                <input type="time" id="wktMulai" name="wktMulai" placeholder="From">
+                <input type="time" id="wktSelesai" name="wktSelesai" placeholder="To">
               </div>
           </div>
         </div><center>

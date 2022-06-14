@@ -38,7 +38,7 @@ $data = $result->data;
     </div>
     <div class="table-responsive">
         <div style="margin-bottom:15px;text-align:right;">
-            <a href="AddForm.php" class="btn btn-success btn-sm">Add Task</a>
+            <a href="AddFormSenin.php" class="btn btn-success btn-sm">Add Task</a>
         </div>
     </div>
         <table class="table table-bordered text-center">
@@ -60,6 +60,7 @@ $data = $result->data;
                         <td class='align-middle'>" . $value->wktMulai . "  -  " . $value->wktSelesai . "</td>
                         <td class='align-middle'>" . $value->jadwal . "</td>
                         <td>
+                            <a href='EditFormSenin.php?id=$value->id'>
                             <button class='btn btn-primary btn-sm'>Edit</button>
                             <a href='delete_senin.php?id=$value->id'>
                                 <button class='btn btn-danger btn-sm'>Delete</button>

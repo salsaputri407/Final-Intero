@@ -38,7 +38,7 @@ $data = $result->data;
     </div>
     <div class="table-responsive">
         <div style="margin-bottom:15px;text-align:right;">
-            <a href="AddForm.php" class="btn btn-success btn-sm">Add Task</a>
+            <a href="AddFormSelasa.php" class="btn btn-success btn-sm">Add Task</a>
         </div>
     </div>
         <table class="table table-bordered text-center">
@@ -60,9 +60,12 @@ $data = $result->data;
                         <td class='align-middle'>" . $value->wktMulai . "  -  " . $value->wktSelesai . "</td>
                         <td class='align-middle'>" . $value->jadwal . "</td>
                         <td>
+                        <a href='EditFormSelasa.php?id=$value->id'>
                         <button class='btn btn-primary btn-sm'>Edit</button>
-                        <button class='btn btn-danger btn-sm'>Delete</button>
-                        </td>
+                        <a href='delete_selasa.php?id=$value->id'>
+                            <button class='btn btn-danger btn-sm'>Delete</button>
+                        </a>
+                    </td>
                     </tr>
                     ";
                     $i++;

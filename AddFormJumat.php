@@ -76,6 +76,7 @@
       }
     </style>
   </head>
+  
   <body>
     <div class="main-block">
       <form action="/">
